@@ -11,4 +11,9 @@ export default [
     to: { name: 'second-page' },
     icon: { icon: 'tabler-file' },
   },
+  {
+    title: 'Products',
+    to: { name: 'products' },
+    icon: { icon: 'tabler-poo' },
+  },
 ] as VerticalNavItems
