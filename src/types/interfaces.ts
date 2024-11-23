@@ -15,3 +15,7 @@ export interface Product {
     description: string;
     image: string;
 }
+
+export interface ObjectWithId {
+    id: number;
+}

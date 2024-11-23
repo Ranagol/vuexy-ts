@@ -1,7 +1,7 @@
-import router from '@/router'
-import axios from 'axios'
+import router from '@/router';
+import axios, { AxiosInstance } from 'axios';
 
-const axiosIns = axios.create({
+const axiosIns: AxiosInstance = axios.create({
   // You can add your headers here
   // ================================
   baseURL: 'https://fakestoreapi.com/',
