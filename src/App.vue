@@ -23,3 +23,4 @@ handleSkinChanges()
     </VApp>
   </VLocaleProvider>
 </template>
+

@@ -3,7 +3,7 @@
         <h1>Products</h1>
         <ul>
             <li 
-                v-for="product in products" 
+                v-for="product in productStore.products" 
                 :key="product.id"
             >{{ product.title }}</li>
         </ul>
@@ -11,15 +11,18 @@
 </template>
 
 <script setup lang="ts">
-import axiosIns from '@/plugins/axios';
-import type { Product } from '../types/interfaces';
+// Here we want to import the /src/types/interfaces.ts file. Since src = @, we can import it like this:
+import { useProductStore } from '@/stores/ProductStore';
 
-const products = ref<Product[]>([]);
+const productStore = useProductStore();
+
 
 onMounted(async () => {
     try {
-        const response = await axiosIns<Product[]>('products')
-        products.value = response.data
+
+        // Here we want to set the products in the store
+        productStore.getAll();
+        
     } catch (error) {
         console.error('Error fetching products:', error)
     }
