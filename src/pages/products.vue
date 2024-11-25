@@ -160,7 +160,8 @@ watchEffect(() => {
 
       <!-- id -->
       <template #item.id="{ item }">
-        {{ item.raw.id }}
+        {{ item }}
+        <!-- {{ item.raw.id }} -->
       </template>
 
 
